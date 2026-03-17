@@ -1,20 +1,20 @@
-let pessoa1 = {nome: "Maria", idade: 30};
-console.log(pessoa1.nome);
-console.log(pessoa1["idade"]);
-pessoa1.profissão = "Desenvolvedora";
-pessoa1.idade = 31;
-console.log(pessoa1);
+const usuarios = [ //cria variavel que armazena uma lista (array)
+    { nome: "Carlos", idade: 32 },
+    { nome: "Ana", idade: 28 },
+    { nome: "Felipe", idade: 40 }
+];
+ //Encontrando um objeto
+ const ana = usuarios.find(usuario => usuario.nome === "Ana"); // "o find vai buscar" - "=== é exatamente igual"
+ console.log(ana);
 
-let pessoa2 = {nome: "João", idade: 25};
-console.log(pessoa2.nome);
-console.log(pessoa2["idade"]);
-pessoa2.profissão = "Designer";
-pessoa2.idade = 26;
-console.log(pessoa2);
+ // Filtrando objetos
+ const usuariosAcimaDe30 = usuarios.filter(usuario => usuario.idade > 30); // "o filter vai filtrar"
+ console.log(usuariosAcimaDe30);
 
-let pessoa3 = {nome: "Ana", idade: 28};
-console.log(pessoa3.nome);
-console.log(pessoa3["idade"]);
-pessoa3.profissão = "Engenheira";
-pessoa3.idade = 29;
-console.log(pessoa3);
+ // Ordenando objetos por idade
+ const usuariosOrdenadosPorIdade = usuarios.sort((a, b) => a.idade - b.idade); // "o sort vai ordenar"
+ console.log(usuariosOrdenadosPorIdade);
+
+ // Ordenando objetos por idade
+ const usuariosOrdenadosPorIdades = usuarios.sort((a, b) => b.idade - a.idade); // "o sort vai ordenar"
+ console.log(usuariosOrdenadosPorIdades);
